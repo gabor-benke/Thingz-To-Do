@@ -1,0 +1,236 @@
+/* The Main Application */
+
+html {
+  background-image: linear-gradient(to bottom right, rgb(97, 68, 7), rgb(214, 150, 13));
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  height: 3000px;
+}
+
+.thingz-to-do {
+  font-size: 4em;
+  font-family: 'Permanent Marker', cursive;
+  color: white;
+  display: flex;
+  justify-content: center;
+}
+
+/* To-Do List */
+
+.todo-list {
+  display: flex;
+  justify-content: center;
+  justify-items: center;
+  flex-direction: column;
+  border-radius: 10px;
+  background-color: rgba(212, 189, 140, 30%);
+}
+
+.plans {
+  font-family: 'Signika Negative', sans-serif;
+  font-size: 2.75em;
+  color: rgb(43, 30, 3);
+  margin: 25px 0 25px 0;
+  display: flex;
+  justify-content: center;
+}
+
+/* Form and Buttons */
+
+input {
+  text-align: center;
+  font-size: 1.125em;
+  font-family: 'Signika Negative', sans-serif;
+  color: rgb(43, 30, 3);
+}
+
+::-webkit-input-placeholder {
+  text-align: center;
+  font-size: 1.125em;
+  font-family: 'Signika Negative', sans-serif;
+  color: rgba(43, 30, 3, 60%);
+}
+
+:-moz-placeholder {
+  text-align: center;
+  font-size: 1.125em;
+  font-family: 'Signika Negative', sans-serif;
+  color: rgba(43, 30, 3, 60%);
+}
+
+.todo-form {
+  display: flex;
+  justify-content: center;
+  margin: 10px 0 35px 0;
+  height: 40px;
+}
+
+.todo-update, .todo-input {
+  border: 3px solid rgb(49, 2, 106);
+  border-right: 0;
+  border-radius: 10px 0 0 10px;
+  width: 400px;
+  display: flex;
+  justify-content: center;
+}
+
+.update-button, .add-button {
+  border: 3px solid rgb(49, 2, 106);
+  width: 100px;
+  border-radius: 0 10px 10px 0;
+  color: white;
+  background-color: rgb(49, 2, 106); 
+  font-family: 'Permanent Marker', cursive;
+  font-size: 1.25em;
+}
+
+/* Todos */
+
+.todo-row {
+  height: auto;
+  width: auto;
+  display: flex;
+  flex-direction: row;
+  justify-items: center;
+  align-items: center;
+  margin: 0 auto 30px auto;
+  box-sizing: border-box;
+  color: white;
+  font-family: 'Signika Negative', sans-serif;
+  font-size: 2em;
+}
+
+.todo-row-complete {
+  height: 60px;
+  width: auto;
+  display: flex;
+  flex-direction: row;
+  justify-items: center;
+  align-items: center;
+  margin: 0 auto 30px auto;
+  box-sizing: border-box;
+  color: rgb(80, 138, 14);
+  font-family: 'Signika Negative', sans-serif;
+  font-size: 2em;
+}
+
+.todo-text {
+  height: 60px;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  padding: 0 50px 0 50px;
+  border-right: 0;
+  border-radius: 10px 0 0 10px;
+  background-image: linear-gradient(to bottom right, rgb(43, 30, 3), rgb(124, 86, 10));
+  background-size: cover;
+}
+
+.icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(212, 189, 140);
+  border-radius: 0 10px 10px 0;
+  height: 60px;
+  width: 70px;
+}
+
+.delete-icon {
+  color: rgb(180, 20, 20);
+}
+
+.delete-icon:hover {
+  color: rgb(249, 30, 30);
+}
+
+.edit-icon {
+  color: rgb(79, 2, 173);
+}
+
+.edit-icon:hover {
+  color: rgb(114, 5, 248);
+}
+
+/* Media Queries */
+
+@media only screen and (min-width: 320px) and (max-width: 1174px) {
+  
+  /* The Main Application */
+
+  .thingz-to-do {
+    font-size: 3em;
+  }
+
+  /* To-Do List */
+
+  .plans {
+    font-size: 2em;
+  }
+
+  /* Form and Buttons */
+
+  input {
+    font-size: 1em;
+  }
+  
+  ::-webkit-input-placeholder {
+    font-size: 1em;
+  }
+  
+  :-moz-placeholder {
+    font-size: 1em;
+  }
+
+  .todo-form {
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    height: 35px;
+    width: auto;
+    padding: 0 30px 0 30px;
+  }
+
+  .icons {
+    height: 60px;
+    width: 60px;
+  }
+
+  .delete-icon, .edit-icon {
+    font-size: 32px;
+  }
+  
+  /* Todos */
+
+  .todo-row, .todo-row-complete {
+    font-size: 1.15em;
+    margin: 0 10px 30px 10px;
+    display: flex;
+    justify-content: center;
+  }
+  
+}
+
+/* Font Faces */
+
+@font-face {
+  font-family: 'Permanent Marker', cursive;
+  font-style: regular;
+  font-weight: 400;
+  src: url('./fonts/PermanentMarker-Regular.ttf') format('truetype');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: 'Signika Negative', sans-serif;
+  font-style: regular;
+  font-weight: 400;
+  src: url('./fonts/SignikaNegative-Regular.ttf') format('truetype');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
